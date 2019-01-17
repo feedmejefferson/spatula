@@ -3,7 +3,7 @@ if [[ $# -eq 0 ]] ; then
     echo 'must provide location of file with urls as arg 1'
     exit 0
 fi
-let i=3000
+let i=3120
 for url in `cat $1`
 do 
   let i+=1
