@@ -17,4 +17,11 @@ That will produce a tab delimited output file with the following columns:
 7. license (if it's one that we can use, otherwise this column is missing and column 8 shows up in column 7)
 8. tags (separated by commas)
 
+## download the images
+
+run `get-photos.sh` to download the photos into a folder named `images` 
+
+## build the attribution files
+
+run `build-attributions.sh` to create an attribution file in the `images/attributions` folder corresponding to each image
 
