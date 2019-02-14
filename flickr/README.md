@@ -2,9 +2,13 @@
 
 This folder contains a set of scripts that scrape metadata for a set of images from flickr. 
 
-The main script runs agains a batch of images specified in an input file as `url`s laid out one per line. First run the `getmeta.sh` script with the file containing the list of urls as it's only argument:
+The main script runs against a batch of images specified in an input file as `url`s laid out one per line. 
 
-    ./getmeta.sh image-list.txt |tee -a metadata.tsv
+> Note, for now we're rerunning all of the images to see what may have changed (including to pick up images that may have been missed the last time around -- maybe because the author had lapsed their pro subscription). So for now, add all of the new urls to the end of the `image-list.txt` file. In the future it may get to be too much redundancy and we can start loading from a new file and bumping the starting image number in the script.
+
+First run the `getmeta.sh` script with the file containing the list of urls as it's only argument:
+
+    ./getmeta.sh image-list.txt |tee metadata.tsv
     
 That will produce a tab delimited output file with the following columns:
 
